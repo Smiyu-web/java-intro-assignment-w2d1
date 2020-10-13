@@ -30,10 +30,10 @@ public class FinancialApplicationPayroll {
         System.out.println("Deductions:");
 
         double federalAmount = Math.round(grossPay * federal * 100) / 100d;
-        System.out.println("  Federal Withholding (20.0%): " + federalAmount);
+        System.out.println("  Federal Withholding (" + federal * 100 + "%): " + federalAmount);
 
         double stateAmount = Math.round(grossPay * stateTax * 100) / 100d;
-        System.out.println("  State Withholding (9.0%): " + stateAmount);
+        System.out.println("  State Withholding (" + stateTax * 100 + "%): " + stateAmount);
 
         System.out.println("  Total Deduction: " + (federalAmount + stateAmount));
         System.out.println("Net Pay: " + (grossPay - (federalAmount + stateAmount)));
